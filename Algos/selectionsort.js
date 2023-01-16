@@ -1,20 +1,20 @@
 /* 
-  https://visualgo.net/en/sorting
-    
-  Selection sort works by iterating through the list, finding the minimum
-  value, and moving it to the beginning of the list. Then, ignoring the first
-  position, which is now sorted, iterate through the list again to find the
-  next minimum value and move it to index 1. This continues until all values
-  are sorted.
-  
-  Unstable sort.
-  
-  Time Complexity?
-  Space: O(1) constant.
-  Selection sort is one of the slower sorts.
-  - ideal for: pagination, where page 1 displays 10 records for example,
-      you run selection sort for 10 iterations only to display the first 10
-      sorted items.
+https://visualgo.net/en/sorting
+
+Selection sort works by iterating through the list, finding the minimum
+value, and moving it to the beginning of the list. Then, ignoring the first
+position, which is now sorted, iterate through the list again to find the
+next minimum value and move it to index 1. This continues until all values
+are sorted.
+
+Unstable sort.
+
+Time Complexity?
+Space: O(1) constant.
+Selection sort is one of the slower sorts.
+- ideal for: pagination, where page 1 displays 10 records for example,
+    you run selection sort for 10 iterations only to display the first 10
+    sorted items.
 */
 
 const numsOrdered = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -42,6 +42,7 @@ function selectionSort(nums = []) {
             }
         }
         // swap the value at the front of the unsorted array with the 
+
         // mininum value
         let temp = nums[smallest];
         nums[smallest] = nums[i];
