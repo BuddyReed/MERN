@@ -1,7 +1,7 @@
 import React from 'react'
 
 const DisplayTask = (props) => {
-    const { toDoList, handleDelete, isComplete } = props;
+    const { toDoList, handleDelete, isDone } = props;
     const { idx } = props;
 
 
@@ -9,26 +9,24 @@ const DisplayTask = (props) => {
         <div style={{
             margin: "0 auto",
         }}>
-            {
-                toDoList.isComplete && <p style={{
-                    textDecoration: "line-through"
-                }}>{toDoList}</p>
-            }
 
 
             <div key={idx}>
                 {toDoList.map((todo, idx) => {
                     return (
-                        <div>
-                            <p key={idx} value={todo.todo}> {todo.todo} </p>
+                        <div key={idx} >
+                            {
+                                todo.isComplete ? <p className='complete'> {todo.todo} </p> : <p> {todo.todo}</p>
+                            }
+                            {/* <p key={idx} value={todo.todo}> {todo.todo} </p> */}
                             < input type="checkbox" checked={todo.isComplete} placeholder='Task'
-                                onChange={e => isComplete(idx)} />
+                                onChange={e => isDone(idx)} />
                             <input onClick={(e) => { handleDelete(idx) }} className='btn btn-dark ms-3' type="submit" value='Delete' />
                         </div>
                     )
                 })}
             </div>
-        </div>
+        </div >
     )
 }
 
