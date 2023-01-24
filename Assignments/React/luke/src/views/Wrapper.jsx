@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Wrapper = (props) => {
     // The below variables are used to gather the data being passed through 
-    // state via the forms inputs. When collect this allow us to change the variables info
+    // state via the forms inputs. When collected this allow us to change the variables info
     // within the API url in our handleSubmit function. 
     const [category, setCategory] = useState('')
     const [id, setId] = useState('')

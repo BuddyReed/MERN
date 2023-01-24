@@ -1,6 +1,6 @@
 const Joke = require('../models/joke.model');
 
-module.exports.findAllJoke = (req, res) => {
+const findAllJoke = (req, res) => {
     Joke.find()
         .then((allDaJokes) => {
             res.json({ jokes: allDaJokes })
@@ -10,7 +10,7 @@ module.exports.findAllJoke = (req, res) => {
         });
 }
 
-module.exports.findOneSingleJoke = (req, res) => {
+const findOneSingleJoke = (req, res) => {
     Joke.findOne({ _id: req.params.id })
         .then(oneSingleJoke => {
             res.json({ joke: oneSingleJoke })
@@ -20,7 +20,7 @@ module.exports.findOneSingleJoke = (req, res) => {
         });
 }
 
-module.exports.createNewJoke = (req, res) => {
+const createNewJoke = (req, res) => {
     Joke.create(req.body)
         .then(newlyCreatedJoke => {
             res.json({ joke: newlyCreatedJoke })
@@ -30,7 +30,7 @@ module.exports.createNewJoke = (req, res) => {
         });
 }
 
-module.exports.updateExistingJoke = (req, res) => {
+const updateExistingJoke = (req, res) => {
     Joke.findOneAndUpdate(
         { _id: req.params.id },
         req.body,
@@ -44,7 +44,7 @@ module.exports.updateExistingJoke = (req, res) => {
         });
 }
 
-module.exports.deleteAnExistingJoke = (req, res) => {
+const deleteAnExistingJoke = (req, res) => {
     Joke.deleteOne({ _id: req.params.id })
         .then(result => {
             res.json({ result: result })
@@ -52,4 +52,13 @@ module.exports.deleteAnExistingJoke = (req, res) => {
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
         });
+}
+
+
+module.exports = {
+    createNewJoke,
+    findAllJoke,
+    findOneSingleJoke,
+    updateExistingJoke,
+    deleteAnExistingJoke,
 }
