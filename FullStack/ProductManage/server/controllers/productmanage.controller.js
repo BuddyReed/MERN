@@ -1,9 +1,9 @@
-const Product = require('../models/productmanage.model');
+const { Product } = require('../models/productmanage.model');
 
 const findAllProduct = (req, res) => {
     Product.find()
         .then((allDaProducts) => {
-            res.json({ products: allDaProducts })
+            res.json({ product: allDaProducts })
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })

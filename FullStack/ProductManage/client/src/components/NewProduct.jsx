@@ -21,7 +21,7 @@ const NewProduct = () => {
         axios.post("http://localhost:8000/api/products/", newProduct)
             .then(res => {
                 console.log("create console log" + res.data);
-                navigate(`/products/${res.data._id}`)
+                navigate(`/product/${res.data.product._id}`)
             }).catch(err => {
                 console.log(" I made it to catch")
                 console.log(err);
@@ -68,10 +68,6 @@ const NewProduct = () => {
                 </div>
                 <button className="btn btn-sm btn-outline-success">Submit</button>
             </form>
-
-
-
-
 
         </div>
     )
