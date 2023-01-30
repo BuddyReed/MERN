@@ -10,6 +10,10 @@ const AllAuthor = () => {
         axios.get('http://localhost:8000/api/authors')
             .then(res => {
                 console.log(res.data);
+                // This sorts the array in 
+                res.data.author.sort((a, b) => (
+                    (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1
+                ));
                 setAuthors(res.data.author);
             }).catch(err => {
                 console.log(err);

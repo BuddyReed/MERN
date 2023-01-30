@@ -12,6 +12,7 @@ const EditProduct = () => {
 
     const navigate = useNavigate();
 
+    // Server reuest for data on form when loading the page
     useEffect(() => {
         axios.get(`http://localhost:8000/api/products/${id}`)
             .then(res => {
@@ -29,6 +30,7 @@ const EditProduct = () => {
             })
     }, [id])
 
+    // Update 
     const handleUpdate = (e) => {
         e.preventDefault();
 
@@ -41,6 +43,7 @@ const EditProduct = () => {
 
         }
 
+        // Server put request
         axios.put(`http://localhost:8000/api/products/${id}`, editedProduct)
             .then(res => {
                 console.log(res);
