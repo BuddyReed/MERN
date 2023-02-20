@@ -15,7 +15,7 @@ export const verifyToken = async (req, res, next) => {
         }
         // This will set the token starting with BEARER(string)on the frontend. 
         // Then the token will start after the bearer...
-        if (toke.startsWith("Bearer ")) {
+        if (token.startsWith("Bearer ")) {
             token = token.slice(7, token.length).trimLeft();
         }
         const verified = jwt.verify(token, process.env.JWT_SECRET);
