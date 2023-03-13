@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-Socialize is a social media application
+Socail media over the past years have became extrememly popular. I have had the pleasure of utiltling socail media platforms such as Myspace, Facebook, Instagrem, Twitter and Linedin. I decided to create a social media application 
 
 ## Features Demo
 
@@ -21,4 +21,3 @@ Socialize is a social media application
 - Mongoose
 - MongoDB
 - JsonWebToken "JWT"
-- 
