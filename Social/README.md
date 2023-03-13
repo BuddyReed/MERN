@@ -3,7 +3,7 @@
 <img src="https://user-images.githubusercontent.com/114322129/223909229-04fe97e4-7c8e-474d-bda8-313b94d67b40.png" >
 </p>
 
-## Project Description
+## Description
 
 Socailize is a full stack MERN socail media application.
 
