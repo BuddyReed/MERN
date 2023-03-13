@@ -3,13 +3,9 @@
 <img src="https://user-images.githubusercontent.com/114322129/223909229-04fe97e4-7c8e-474d-bda8-313b94d67b40.png" >
 </p>
 
-## Project Overview
+## Project Description
 
-Socail media over the past years have became extrememly popular. I have had the pleasure of utiltling socail media platforms such as Myspace, Facebook, Instagrem, Twitter and Linedin. I decided to create a social media application 
-
-## Features Demo
-
-![Socialize](https://user-images.githubusercontent.com/114322129/223858652-1eda1f56-22cf-4b2d-b7c7-2c13f33312b1.gif)
+Socailize is a full stack MERN socail media application.
 
 ## Technologies Used
 
@@ -21,3 +17,8 @@ Socail media over the past years have became extrememly popular. I have had the 
 - Mongoose
 - MongoDB
 - JsonWebToken "JWT"
+
+## Features Demo
+
+![Socialize](https://user-images.githubusercontent.com/114322129/223858652-1eda1f56-22cf-4b2d-b7c7-2c13f33312b1.gif)
+
