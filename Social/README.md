@@ -5,7 +5,7 @@
 
 ## Description
 
-Socailize is a full stack MERN socail media application.
+Socialize is a full stack MERN social media application.
 
 ## Technologies Used
 
