@@ -17,6 +17,7 @@ Socialize is a full stack MERN social media application.
 - Mongoose
 - MongoDB
 - JsonWebToken "JWT"
+- Canva
 
 ## Features Demo
 
